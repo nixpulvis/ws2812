@@ -1,10 +1,7 @@
-PREFIX = /usr/local/Cellar
+AVRM = /usr/local/Cellar/avrm/0.0.4
 LIBRARY = ws2812
 VERSION = 0.0.1
-
-TARGET = $(PREFIX)/$(LIBRARY)/$(VERSION)
-AVRM = $(PREFIX)/avrm/0.0.3
-
-DEPENDENCIES = $(TARGET) $(AVRM)
+PREFIX = /usr/local/Cellar/$(LIBRARY)/$(VERSION)
+DEPENDENCIES = $(AVRM) $(PREFIX)
 
 include $(AVRM)/Makefile
